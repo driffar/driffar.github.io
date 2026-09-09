@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>长歌行漫画-长歌行漫画全集阅读指南与作品介绍</title>
+    <meta name="description" content="长歌行漫画是夏达创作的人气古风历史漫画，以大唐初期为背景，讲述永宁公主李长歌的成长复仇之旅。本站提供长歌行漫画作品介绍、人物解析、剧情脉络、阅读顺序与相关资讯指南。">
+    <meta name="keywords" content="长歌行漫画,长歌行,夏达漫画,古风漫画,大唐漫画,李长歌,长歌行漫画阅读">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+            background-color: #faf6f0;
+            color: #2c2a28;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 页眉 */
+        .site-header {
+            background: linear-gradient(135deg, #4a2c2a 0%, #6d3f3c 100%);
+            color: #f7ede0;
+            padding: 20px 0;
+            border-bottom: 4px solid #c9a87c;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .brand h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #f3e3cf;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .brand p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            letter-spacing: 1px;
+        }
+        .main-nav {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: #f7ede0;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+        }
+        .main-nav a:hover {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+        /* 首屏 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj48cGF0aCBkPSJNMzAgMTBhMTAgMTAgMCAwIDEgMjAgMCAxMCAxMCAwIDAgMSAyMCAxMCAxMCAxMCAwIDAgMSAxMCAxMCAxMCAxMCAwIDAgMS0xMCAxMCAxMCAxMCAwIDAgMS0yMCAwIDEwIDEwIDAgMCAxLTIwIDAgMTAgMTAgMCAwIDEtMTAgLTEwIDEwIDEwIDAgMCAxIDEwIC0xMCAxMCAxMCAwIDAgMSAxMCAtMTB6IiBmaWxsPSIjZTRjZDlhIiBvcGFjaXR5PSIwLjMiLz48L3N2Zz4=');
+            background-size: cover;
+            background-position: center;
+            padding: 90px 0;
+            text-align: center;
+            color: #fff;
+            background-color: #5a3a36;
+        }
+        .hero h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 3px 8px rgba(0,0,0,0.6);
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 750px;
+            margin: 0 auto 30px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+            opacity: 0.95;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: #c9a87c;
+            color: #2c1e1a;
+            padding: 12px 34px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            border: 1px solid #dbbd94;
+        }
+        .btn-primary:hover {
+            background: #ddb98b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+        }
+        /* 区块通用 */
+        .section {
+            padding: 70px 0;
+        }
+        .section-alt {
+            background: #f2ebe2;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #4a2c2a;
+            position: relative;
+            letter-spacing: 2px;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1rem;
+            color: #7a6a5c;
+            margin-bottom: 45px;
+            letter-spacing: 1px;
+        }
+        .divider {
+            width: 70px;
+            height: 3px;
+            background: #c9a87c;
+            margin: 0 auto 40px;
+            border-radius: 3px;
+        }
+        /* 卡片 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 22px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #c9a87c;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            font-size: 1.3rem;
+            color: #4a2c2a;
+            margin-bottom: 12px;
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: #4d4540;
+        }
+        /* 人物网格 */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+        .char-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 25px 18px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .char-item:hover {
+            transform: scale(1.02);
+        }
+        .char-item .char-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #e3d5c8;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #6d3f3c;
+        }
+        .char-item h3 {
+            font-size: 1.1rem;
+            color: #3e2b28;
+            margin-bottom: 5px;
+        }
+        .char-item .role {
+            font-size: 0.85rem;
+            color: #a08c7a;
+            margin-bottom: 10px;
+        }
+        .char-item p {
+            font-size: 0.9rem;
+            text-align: left;
+            color: #5a514a;
+        }
+        /* 剧情时间线 */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #c9a87c;
+            margin-left: 15px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+            padding-left: 20px;
+        }
+        .timeline-item::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: #6d3f3c;
+            border-radius: 50%;
+            position: absolute;
+            left: -38px;
+            top: 8px;
+            border: 2px solid #c9a87c;
+        }
+        .timeline-item h3 {
+            font-size: 1.2rem;
+            color: #4a2c2a;
+            margin-bottom: 6px;
+        }
+        .timeline-item p {
+            font-size: 0.95rem;
+            color: #544b44;
+        }
+        /* 信息列表 */
+        .info-list {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 35px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .info-list ul {
+            list-style: none;
+        }
+        .info-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #e2d7cc;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        .info-list .tag {
+            background: #f0e4d8;
+            color: #6d3f3c;
+            font-size: 0.8rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+        /* FAQ */
+        .faq-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            border-left: 4px solid #b98c5e;
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            color: #4a2c2a;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            font-size: 0.95rem;
+            color: #5c534d;
+        }
+        /* 阅读指引 */
+        .guide-box {
+            background: #fff9f2;
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e8d9c8;
+        }
+        .step-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        .step-item {
+            text-align: center;
+            padding: 20px 12px;
+            background: #fff;
+            border-radius: 14px;
+        }
+        .step-num {
+            width: 45px;
+            height: 45px;
+            background: #6d3f3c;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0 auto 15px;
+        }
+        .step-item h4 {
+            color: #4a2c2a;
+            margin-bottom: 8px;
+        }
+        .step-item p {
+            font-size: 0.9rem;
+            color: #6b5f55;
+        }
+        /* 相关主题 */
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .related-links a {
+            background: #fff;
+            border: 1px solid #dcc9b4;
+            color: #4a2c2a;
+            padding: 8px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .related-links a:hover {
+            background: #6d3f3c;
+            color: #fff;
+            border-color: #6d3f3c;
+        }
+        /* 页脚 */
+        .site-footer {
+            background: #2e201e;
+            color: #cbb9a8;
+            padding: 45px 0 30px;
+            margin-top: 30px;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        .footer-brand h3 {
+            color: #e8d5c0;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+        .footer-brand p {
+            font-size: 0.9rem;
+            max-width: 300px;
+            opacity: 0.8;
+        }
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+        .footer-links a {
+            color: #cbb9a8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #f3e3cf;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #4a3a33;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            .brand h1 {
+                font-size: 1.8rem;
+            }
+            .hero {
+                padding: 60px 0;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .section {
+                padding: 50px 0;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .guide-box {
+                padding: 25px 20px;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-links {
+                justify-content: center;
+            }
+            .info-list li {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+        @media (max-width: 480px) {
+            .main-nav {
+                justify-content: center;
+            }
+            .main-nav a {
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .char-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="brand">
+            <h1>长歌行漫画</h1>
+            <p>古风历史 · 大唐风云 · 少女成长史诗</p>
+        </div>
+        <nav class="main-nav">
+            <a href="#intro">作品简介</a>
+            <a href="#characters">主要人物</a>
+            <a href="#story">剧情脉络</a>
+            <a href="#read">阅读指南</a>
+            <a href="#faq">常见问题</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h2>长歌行漫画 · 一部属于大唐的少女史诗</h2>
+        <p>以初唐为背景，讲述永宁公主李长歌在家族变故后，女扮男装、化名李十四，踏上复仇与成长之路的传奇故事。夏达以细腻笔触描绘了权谋、战争与人性纠葛。</p>
+        <a href="#story" class="btn-primary">探寻长歌的旅程</a>
+    </div>
+</section>
+
+<main>
+    <!-- 作品简介 -->
+    <section class="section" id="intro">
+        <div class="container">
+            <h2 class="section-title">作品简介</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">从《长歌行》漫画的创作背景到故事内核，带你快速了解这部作品</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>📖 基本信息</h3>
+                    <p>《长歌行》是中国漫画家夏达的代表作之一，于2011年开始连载。故事设定在唐朝武德年间，以真实历史为骨，虚构情节为翼，融合权谋、战争、亲情等多重元素。漫画以其精美的古风画风和严谨的历史细节赢得了大量读者。</p>
+                </div>
+                <div class="card">
+                    <h3>🎨 画风特色</h3>
+                    <p>夏达的笔触细腻流畅，人物造型飘逸俊美，场景大气恢宏。无论是长安的繁华街市，还是朔州的边塞风雪，都描绘得极具古韵。分镜叙事富有电影感，动作场面张力十足，情感刻画含蓄而深刻。</p>
+                </div>
+                <div class="card">
+                    <h3>🏆 作品影响</h3>
+                    <p>《长歌行》漫画曾在中日两国多家漫画杂志连载，单行本销量可观，并获得多项漫画奖项。2015年，该作曾宣布动画化（后因故搁置），2021年又被改编为同名电视剧，进一步扩大了IP影响力。</p>
+                </div>
+            </div>
+            <div style="margin-top: 35px; background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+                <h3 style="color: #6d3f3c; margin-bottom: 12px; font-size: 1.3rem;">故事开篇</h3>
+                <p>玄武门之变后，太子李建成之女李长歌侥幸逃生。她从高高在上的永宁公主一夜之间沦为朝廷钦犯。为查明真相、为家人复仇，她女扮男装，化名李十四，远走边关。在乱世中，她凭借过人的才略与胆识，逐渐从复仇的执念中走出，开始思考何为真正的家国大义。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要人物 -->
+    <section class="section section-alt" id="characters">
+        <div class="container">
+            <h2 class="section-title">主要人物</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">他们是长歌生命中的光与影，也是她成长路上不可或缺的存在</p>
+            <div class="char-grid">
+                <div class="char-item">
+                    <div class="char-icon">👤</div>
+                    <h3>李长歌</h3>
+                    <div class="role">女主角 / 永宁公主</div>
+                    <p>本名李长歌，太子李建成之女。玄武门之变后家破人亡，女扮男装化名李十四。她聪明果敢、武艺高强，拥有出色的军事才能。从复仇到守护，她的成长贯穿始终。</p>
+                </div>
+                <div class="char-item">
+                    <div class="char-icon">⚔️</div>
+                    <h3>阿史那隼</h3>
+                    <div class="role">男主角 / 草原战将</div>
+                    <p>东突厥特勤，勇猛善战，性格豪迈不羁。与长歌相识于危难之际，两人从对手到知己，在乱世中相互扶持，情感深厚而克制。</p>
+                </div>
+                <div class="char-item">
+                    <div class="char-icon">🎭</div>
+                    <h3>李世民</h3>
+                    <div class="role">唐太宗 / 叔父</div>
+                    <p>玄武门之变的发动者，也是长歌的叔父。他既有雄才大略，又背负着手足相残的阴影。与长歌的关系复杂而微妙，既是仇人，也是她敬重的明君。</p>
+                </div>
+                <div class="char-item">
+                    <div class="char-icon">🌿</div>
+                    <h3>公孙恒</h3>
+                    <div class="role">朔州刺史</div>
+                    <p>驻守朔州的忠臣良将，为人正直忠厚。在长歌流亡期间收留并信任她，给予了父亲般的关怀，是长歌转变观念的重要人物。</p>
+                </div>
+                <div class="char-item">
+                    <div class="char-icon">🌸</div>
+                    <h3>弥弥古丽</h3>
+                    <div class="role">回纥少女</div>
+                    <p>流落大唐的回纥女孩，善良坚韧。与长歌结下深厚友谊，她的存在让长歌在冰冷复仇路上感受到温暖与柔软。</p>
+                </div>
+                <div class="char-item">
+                    <div class="char-icon">🎋</div>
+                    <h3>魏徵</h3>
+                    <div class="role">太子旧臣</div>
+                    <p>原太子府幕僚，后为李世民所用。他欣赏长歌的才华，在关键时刻多次暗中相助，是朝堂上的一股清流。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 剧情脉络 -->
+    <section class="section" id="story">
+        <div class="container">
+            <h2 class="section-title">剧情脉络</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">《长歌行》漫画的故事大体可分为几个阶段，每一段都是长歌的蜕变之旅</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>第一幕：长安惊变</h3>
+                    <p>玄武门之变爆发，长歌目睹母亲自刎、家族覆灭。她带着弟弟的遗愿逃出长安，隐姓埋名踏上流亡之路。此时的她心中只有复仇，恨意成为支撑她活下去的力量。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>第二幕：朔州风云</h3>
+                    <p>长歌化名李十四来到朔州，在刺史公孙恒麾下展现才能。她参与守城、对抗突厥，逐渐体会到守护百姓的责任感。公孙恒夫妇的真诚相待让她冰冷的心开始融化。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>第三幕：草原羁旅</h3>
+                    <p>因身份暴露，长歌离开朔州前往草原。她与阿史那隼相遇，在突厥内部卷入权力斗争。两人从相互戒备到并肩作战，长歌也在此过程中重新审视复仇的意义。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>第四幕：家国抉择</h3>
+                    <p>随着对天下苍生疾苦的深入了解，长歌逐渐放下个人恩怨。她开始思考如何用自己的力量守护更多人。复仇的执念升华为对家国大义的担当，人物格局彻底打开。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>特别篇与后续</h3>
+                    <p>漫画在连载过程中穿插了若干番外与特别篇，补充了人物前史与支线故事。目前《长歌行》漫画仍在连载中，长歌的最终命运尚未揭晓，但她的成长轨迹已足够动人。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 阅读指南与优势 -->
+    <section class="section section-alt" id="read">
+        <div class="container">
+            <h2 class="section-title">阅读指南</h2>
+            <div class="divider"></div>
+            <div class="guide-box">
+                <h3 style="color: #4a2c2a; margin-bottom: 10px;">如何开始阅读《长歌行》漫画？</h3>
+                <p style="color: #6b5f55;">无论你是刚接触这部作品的新读者，还是想重温经典的老粉丝，以下建议都能帮助你获得更好的阅读体验。</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <h4>从单行本第一卷开始</h4>
+                        <p>漫画单行本按剧情顺序编排，从第一卷读起可以完整理解故事脉络，感受画风逐步成熟的过程。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <h4>结合历史背景阅读</h4>
+                        <p>故事涉及玄武门之变、唐突关系等真实历史，提前了解武德年间的大背景，能更深入地理解人物动机。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <h4>留意细节与伏笔</h4>
+                        <p>夏达擅长埋设细节，人物的眼神、场景中的器物、对话的弦外之音，往往暗示着后续发展，值得反复品味。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <h4>配合番外与设定集</h4>
+                        <p>部分番外补充了角色往事，设定集则包含人物设定与世界观解析，可作为主线阅读的有益补充。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 优势与亮点 -->
+            <div style="margin-top: 50px;">
+                <h3 style="text-align: center; color: #4a2c2a; font-size: 1.6rem; margin-bottom: 20px;">《长歌行》漫画为何值得一读？</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>✦ 历史与虚构的巧妙融合</h3>
+                        <p>漫画以真实历史为骨架，将虚构主角嵌入大唐初年的风云际会中。李世民、魏徵、房玄龄等历史人物悉数登场，虚构与真实交织而不突兀，让读者在故事中感受历史温度。</p>
+                    </div>
+                    <div class="card">
+                        <h3>✦ 女主成长弧光饱满</h3>
+                        <p>李长歌不是脸谱化的复仇工具，她有恐惧、有动摇、有温情。从一心复仇到心怀天下，她的转变有充分的铺垫与说服力，是国产漫画中少有的丰满女性主角形象。</p>
+                    </div>
+                    <div class="card">
+                        <h3>✦ 古风画技的极致展现</h3>
+                        <p>夏达的线条与用色极具古典美感，服饰、建筑、器物皆有考据。战斗场面气势磅礴，情感戏份又细腻如诗，每一帧都值得驻足欣赏。</p>
+                    </div>
+                    <div class="card">
+                        <h3>✦ 对家国与道义的思考</h3>
+                        <p>故事不止于个人恩怨，更探讨了何为忠义、何为明君、何为天下。长歌的困惑与抉择，折射出深刻的历史观与价值观，引人深思。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">相关主题</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">如果你喜欢《长歌行》，以下主题或许你也会感兴趣</p>
+            <div class="info-list">
+                <ul>
+                    <li><span class="tag">改编作品</span> <span>2021年播出的电视剧《长歌行》由迪丽热巴、吴磊主演，在漫画基础上进行了大幅改编，剧集与漫画各有千秋。</span></li>
+                    <li><span class="tag">作者其他作品</span> <span>夏达的《子不语》《步天歌》《拾遗录》等作品同样充满古风韵味，其中《步天歌》也是备受好评的长篇奇幻漫画。</span></li>
+                    <li><span class="tag">同类推荐</span> <span>喜欢历史古风漫画的读者，可能也会对《天行轶事》《凤囚凰》漫画版、《哑舍》等作品产生兴趣。</span></li>
+                    <li><span class="tag">单行本信息</span> <span>《长歌行》漫画单行本由磨铁图书等出版方发行，目前市面上可以买到已出版的前期单行本，适合收藏。</span></li>
+                </ul>
+            </div>
+            <div class="related-links">
+                <a href="#">长歌行动画化</a>
+                <a href="#">夏达画集</a>
+                <a href="#">大唐历史科普</a>
+                <a href="#">古风漫画推荐</a>
+                <a href="#">李长歌角色分析</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="divider"></div>
+            <div style="max-width: 850px; margin: 0 auto;">
+                <div class="faq-item">
+                    <h3>Q：《长歌行》漫画完结了吗？</h3>
+                    <p>A：截至2025年，《长歌行》漫画尚未正式完结。作品曾多次休刊与复刊，目前仍在断续连载中。单行本已出版至十几卷，读者可先阅读已发布章节。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q：电视剧和漫画剧情一样吗？</h3>
+                    <p>A：电视剧《长歌行》在人物关系和主线剧情上做了较大改编，增加了部分原创角色和感情线，结局也与漫画目前进度不同。两者建议作为独立作品看待。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q：在哪里可以看《长歌行》漫画？</h3>
+                    <p>A：正版漫画可以在腾讯动漫等网络平台付费阅读，也可以购买实体单行本。建议支持正版，尊重创作者的劳动成果。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q：漫画适合什么年龄段的读者？</h3>
+                    <p>A：漫画涉及战争、权谋、流血等情节，但表现手法并不血腥。整体上属于老少皆宜的作品，推荐给喜欢历史、古风题材的青少年及成人读者。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Q：长歌最后复仇成功了吗？</h3>
+                    <p>A：漫画目前尚未完结，不过从剧情发展来看，长歌已经逐渐放下了对李世民的个人仇恨。她开始理解治国的艰难与责任，复仇已不再是她的唯一目标。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>长歌行漫画</h3>
+                <p>一个关于大唐、成长与抉择的传奇故事。本站为爱好者提供作品介绍与阅读指引，不提供任何盗版资源链接。</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><strong style="color: #e8d5c0;">作品</strong></li>
+                    <li><a href="#intro">简介</a></li>
+                    <li><a href="#characters">人物</a></li>
+                    <li><a href="#story">剧情</a></li>
+                </ul>
+                <ul>
+                    <li><strong style="color: #e8d5c0;">指南</strong></li>
+                    <li><a href="#read">阅读顺序</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 长歌行漫画爱好者指南 · 本页面仅用于作品介绍与交流 · 版权归原作者夏达及出版方所有</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+  </html>
