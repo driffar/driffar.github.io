@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>富江漫画-富江漫画全系列介绍与阅读指南</title>
+    <meta name="description" content="深入解读伊藤润二经典恐怖漫画富江漫画，涵盖全系列作品介绍、角色解析、阅读顺序、入坑指南与常见问题，带你全面了解富江的恐怖魅力。">
+    <meta name="keywords" content="富江漫画,富江,伊藤润二,恐怖漫画,富江漫画系列,富江漫画阅读">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+            background-color: #f5f5f0;
+            color: #2d2d2d;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== Header ===== */
+        .site-header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #3b1f1f 100%);
+            color: #f0e6d6;
+            padding: 16px 0;
+            border-bottom: 3px solid #8b0000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #e0c4a0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .logo span {
+            color: #c0392b;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: #d8cfc0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .main-nav a:hover {
+            color: #fff;
+            border-color: #8b0000;
+            background: rgba(139,0,0,0.2);
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            background: linear-gradient(to bottom, #2b1a1a, #3d2a2a);
+            color: #f0e0d0;
+            padding: 70px 0 60px;
+            text-align: center;
+            border-bottom: 1px solid #4a2c2c;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            margin-bottom: 18px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+            color: #f5e6d0;
+        }
+
+        .hero h1 span {
+            color: #b0302a;
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            max-width: 720px;
+            margin: 0 auto 30px;
+            color: #cbb9a8;
+            line-height: 1.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .hero-tag {
+            background: rgba(180, 40, 30, 0.25);
+            border: 1px solid #9a4a40;
+            color: #e8d5c8;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* ===== Section common ===== */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-alt {
+            background-color: #ece8e0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c1e1e;
+            margin-bottom: 12px;
+            position: relative;
+            padding-bottom: 14px;
+            letter-spacing: 2px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: #8b0000;
+        }
+
+        .section-desc {
+            color: #5a4a4a;
+            margin-bottom: 36px;
+            max-width: 900px;
+        }
+
+        /* ===== Card Grid ===== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #8b0000;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .card-body h3 {
+            font-size: 1.3rem;
+            color: #3d1f1f;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-body p {
+            color: #5f5a5a;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px dashed #ddd;
+            padding-top: 10px;
+            margin-top: 12px;
+        }
+
+        .card-label {
+            display: inline-block;
+            background: #f0e0d8;
+            color: #8b0000;
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        /* ===== Intro panel ===== */
+        .intro-panel {
+            background: #fff;
+            border-radius: 12px;
+            padding: 36px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-left: 6px solid #8b0000;
+            margin-bottom: 40px;
+        }
+
+        .intro-panel p {
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+            color: #3d3535;
+        }
+
+        .intro-panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        .quote {
+            font-style: italic;
+            border-left: 3px solid #b0302a;
+            padding-left: 20px;
+            margin: 20px 0;
+            color: #6b4a4a;
+            background: #faf7f2;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* ===== Steps ===== */
+        .steps-list {
+            counter-reset: step;
+            list-style: none;
+        }
+
+        .steps-list li {
+            counter-increment: step;
+            position: relative;
+            padding: 20px 20px 20px 70px;
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: background 0.3s;
+        }
+
+        .steps-list li:hover {
+            background: #faf5f0;
+        }
+
+        .steps-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 34px;
+            height: 34px;
+            background: #8b0000;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .steps-list h3 {
+            font-size: 1.15rem;
+            color: #3d1f1f;
+            margin-bottom: 6px;
+        }
+
+        .steps-list p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 1000px;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 18px 24px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #3d1f1f;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #faf7f2;
+            transition: background 0.3s;
+            border-left: 4px solid transparent;
+        }
+
+        .faq-question:hover {
+            background: #f0e8e0;
+            border-left-color: #8b0000;
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: #8b0000;
+            font-weight: 300;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 24px 20px;
+            max-height: 500px;
+        }
+
+        /* ===== Notice ===== */
+        .notice-box {
+            background: #faf3e8;
+            border: 1px solid #e5d5c0;
+            border-radius: 10px;
+            padding: 24px 28px;
+            margin: 30px 0;
+            border-left: 5px solid #c09a6a;
+        }
+
+        .notice-box h3 {
+            color: #7a5a3a;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .notice-box ul {
+            padding-left: 20px;
+            color: #6b5a4a;
+        }
+
+        .notice-box li {
+            margin-bottom: 8px;
+        }
+
+        /* ===== Related ===== */
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .related-item {
+            background: #fff;
+            border-radius: 8px;
+            padding: 16px 22px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid #e8e0d8;
+            transition: all 0.3s;
+            flex: 1 1 200px;
+            text-decoration: none;
+            color: #3d3535;
+        }
+
+        .related-item:hover {
+            border-color: #8b0000;
+            background: #fff8f5;
+            transform: translateY(-3px);
+        }
+
+        .related-item strong {
+            display: block;
+            color: #8b0000;
+            margin-bottom: 4px;
+            font-size: 1.05rem;
+        }
+
+        .related-item small {
+            color: #777;
+        }
+
+        /* ===== Footer ===== */
+        .site-footer {
+            background: #1a1a1a;
+            color: #9a9a9a;
+            padding: 40px 0 30px;
+            margin-top: 20px;
+            border-top: 4px solid #8b0000;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-brand {
+            max-width: 320px;
+        }
+
+        .footer-brand h3 {
+            color: #e0c4a0;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #8a8a8a;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #c0a080;
+        }
+
+        .footer-copy {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .main-nav ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-sub {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .intro-panel {
+                padding: 24px;
+            }
+
+            .steps-list li {
+                padding-left: 60px;
+            }
+
+            .steps-list li::before {
+                left: 15px;
+                width: 30px;
+                height: 30px;
+                font-size: 0.9rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-tags {
+                gap: 8px;
+            }
+
+            .hero-tag {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-question {
+                padding: 15px 18px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">富江漫画<span>·恐怖美学</span></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#overview">系列概览</a></li>
+                <li><a href="#works">主要篇章</a></li>
+                <li><a href="#guide">入坑指南</a></li>
+                <li><a href="#analysis">深度解读</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>富江漫画<span>· 永生的恐怖循环</span></h1>
+        <p class="hero-sub">她是恐怖漫画史上的一个异类——美丽、妖异、无法被杀死的存在。伊藤润二笔下的富江漫画系列，以独特的方式探讨了美、欲望与毁灭的母题。当你翻开第一页，便踏入了无法回头的恐怖深渊。</p>
+        <div class="hero-tags">
+            <span class="hero-tag">伊藤润二经典</span>
+            <span class="hero-tag">无限增殖的恐惧</span>
+            <span class="hero-tag">恐怖美学教科书</span>
+            <span class="hero-tag">系列作品解析</span>
+        </div>
+    </div>
+</section>
+
+<main>
+    <!-- 系列简介区 -->
+    <section class="section" id="overview">
+        <div class="container">
+            <h2 class="section-title">富江漫画：一部永不完结的恐怖传奇</h2>
+            <div class="intro-panel">
+                <p>富江漫画是日本著名恐怖漫画家伊藤润二于1987年开始连载的系列作品。故事围绕一名叫川上富江的少女展开，她拥有惊人的美貌，却同时具备一种令人不安的特质——她会不断引诱周围的人走向疯狂与毁灭，而她自己则无论如何被杀害，都会以某种方式复活，甚至从尸体碎片中分裂出新的个体。</p>
+                <p>这一系列作品并非单一连贯的故事，而是由多个相对独立又相互关联的篇章组成。每个故事中富江都会以不同的身份出现，但她的本质从未改变：既是欲望的投射对象，也是毁灭的源头。这种结构使得富江漫画系列具有独特的阅读体验——你可以从任何一卷开始，却永远无法真正“完成”这个系列。</p>
+                <div class="quote">
+                    “富江不是一个角色，她是一种概念——关于美为何会招致毁灭的永恒追问。”
+                </div>
+                <p>截至今日，富江漫画系列包含超过20个独立故事，被收录在多卷单行本中。该系列不仅奠定了伊藤润二在恐怖漫画界的地位，也深刻影响了后来的无数恐怖作品。无论你是初次接触还是资深读者，富江漫画都能带给你一种奇特的、挥之不去的心理余韵。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要篇章卡片 -->
+    <section class="section section-alt" id="works">
+        <div class="container">
+            <h2 class="section-title">富江漫画主要篇章一览</h2>
+            <p class="section-desc">富江漫画系列包含众多独立故事，以下是一些极具代表性的篇章。每个故事都从不同角度挖掘了富江这一角色身上的恐怖本质。</p>
+            <div class="card-grid">
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-label">开篇之作</span>
+                        <h3>《富江》</h3>
+                        <p>系列的第一篇故事，1987年发表于《万圣节月刊》。在这部开篇中，富江是一名高中女生，她的美貌让所有男生为之倾倒，却也唤起了他们内心深处的杀意。故事揭示了富江的核心设定：被杀害后她会复活，并拥有无限增殖的能力。</p>
+                        <div class="card-meta">关键词：起源 · 美貌 · 杀意</div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-label">经典续章</span>
+                        <h3>《富江·地下室》</h3>
+                        <p>这个故事展示了富江如何利用自己的分裂特性操纵身边的人。一名教师在自家地下室发现了大量的富江尸体碎片，而每一块碎片都在缓慢地再生。故事对“无限增殖”的恐怖进行了更深入的挖掘。</p>
+                        <div class="card-meta">关键词：增殖 · 地下室 · 疯狂</div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-label">人性拷问</span>
+                        <h3>《富江·画家》</h3>
+                        <p>一名画家被富江的美貌深深吸引，试图通过绘画捕捉她的灵魂。然而富江的美丽超出了人类的掌控范围，画家的执念最终演变成一场血腥的悲剧。这部作品被许多读者视为系列中艺术性最高的篇章之一。</p>
+                        <div class="card-meta">关键词：艺术 · 执念 · 美的代价</div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-label">设定拓展</span>
+                        <h3>《富江·暗杀》</h3>
+                        <p>讲述一个专门猎杀富江的组织。他们发现富江的细胞具有惊人的再生能力，于是试图彻底消灭她的存在。但每一次“成功”的暗杀，都会导致更多富江的出现。故事将恐怖从个人层面扩展到社会层面。</p>
+                        <div class="card-meta">关键词：组织 · 猎杀 · 徒劳</div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-label">心理恐怖</span>
+                        <h3>《富江·少年》</h3>
+                        <p>一名少年在偶然间救下了受伤的富江，却发现她有着无法解释的恢复能力。故事以少年的视角展开，逐步揭示了富江的真实面目。这部作品更侧重于心理层面的恐怖氛围营造，而非直接的暴力场景。</p>
+                        <div class="card-meta">关键词：少年 · 视角 · 心理战</div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-label">哲学探讨</span>
+                        <h3>《富江·另一个自我》</h3>
+                        <p>在这个故事中，富江分裂出的个体开始互相残杀。每个富江都认为自己才是“真正的富江”，而这引发了一场关于自我认同的混乱。这部作品被解读为对现代社会中自我异化的隐喻。</p>
+                        <div class="card-meta">关键词：分裂 · 自我 · 异化</div>
+                    </div>
+                </article>
+            </div>
+            <p style="text-align: center; margin-top: 30px; color: #7a6a6a;">以上仅为系列中较具代表性的篇章，富江漫画系列仍有大量精彩故事等待读者探索。</p>
+        </div>
+    </section>
+
+    <!-- 入坑阅读指南 -->
+    <section class="section" id="guide">
+        <div class="container">
+            <h2 class="section-title">富江漫画入坑与阅读指南</h2>
+            <p class="section-desc">对于初次接触富江漫画的读者，正确的阅读顺序和方式能帮助你更好地理解这一系列作品的魅力。以下是一些实用的建议。</p>
+            <ol class="steps-list">
+                <li>
+                    <h3>从最初的故事开始阅读</h3>
+                    <p>建议从1987年发表的第一篇《富江》开始阅读。虽然系列中每个故事相对独立，但第一篇故事奠定了富江的基本设定和世界观，能让你更快理解后续故事中隐含的关联。</p>
+                </li>
+                <li>
+                    <h3>不必追求严格的顺序</h3>
+                    <p>富江漫画系列并非线性叙事，各篇章之间的时间线并不明确。你可以自由选择感兴趣的篇章阅读，但要注意某些故事之间存在微妙的呼应关系。例如《富江·地下室》与《富江·暗杀》中提到的组织背景就有一定关联。</p>
+                </li>
+                <li>
+                    <h3>留意版本与收录情况</h3>
+                    <p>富江漫画在不同国家和地区有不同的出版版本。日本原版单行本将故事按出版顺序编排，而部分海外版本则可能重新整理。建议优先选择伊藤润二公式授权的中文正版版本，以保证画质与翻译质量。</p>
+                </li>
+                <li>
+                    <h3>做好心理准备</h3>
+                    <p>富江漫画的恐怖并非单纯的视觉惊吓，而是逐步累积的心理不适感。伊藤润二擅长通过细腻的画面和日常场景中突然出现的异变来制造恐怖氛围。建议不要在深夜独自阅读，尤其是初次接触的读者。</p>
+                </li>
+                <li>
+                    <h3>结合伊藤润二其他作品阅读</h3>
+                    <p>富江漫画是伊藤润二创作生涯的重要组成部分，但他的其他作品如《漩涡》《人头气球》等也值得关注。阅读这些作品能帮助你更全面地理解伊藤润二的恐怖美学体系。</p>
+                </li>
+            </ol>
+
+            <div class="notice-box">
+                <h3>阅读注意事项</h3>
+                <ul>
+                    <li>富江漫画包含暴力、血腥及心理恐怖内容，建议18岁以上读者阅读。</li>
+                    <li>部分早期故事画风较为粗糙，但恐怖氛围的营造能力依然出色。</li>
+                    <li>系列中富江的形象在不同故事中略有差异，这是伊藤润二对角色不断调整的结果。</li>
+                    <li>建议从正规渠道获取正版漫画资源，支持创作者。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 深度解读 -->
+    <section class="section section-alt" id="analysis">
+        <div class="container">
+            <h2 class="section-title">富江漫画的深层魅力与主题解读</h2>
+            <div class="intro-panel">
+                <p>富江漫画之所以能在众多恐怖作品中脱颖而出，不仅仅是因为其血腥和怪诞的表象。在那些令人不安的画面背后，伊藤润二编织了关于人性、欲望和社会的复杂寓言。</p>
+                <p><strong>关于美的悖论：</strong>富江是美的化身，但她的美总是引发他人的占有欲和毁灭欲。这反映了人类对极致美的一种矛盾心理——既渴望占有，又无法承受。伊藤润二通过富江的故事，探讨了美在人类社会中的破坏性力量。</p>
+                <p><strong>分裂与现代人的身份焦虑：</strong>富江的无限增殖能力，可以看作对现代人身份分裂的一种隐喻。每个人都在不同的社会角色中分裂着自己，而富江则将这种心理上的分裂具象化为肉体的分裂。这种解读让富江漫画超越了简单的恐怖故事，具有了社会学层面的意义。</p>
+                <p><strong>死亡与永生的辩证：</strong>富江无法真正死去，但这种永生并非祝福，而是一种永恒的诅咒。她永远无法获得安宁，也无法真正地活着。这种对永生的反乌托邦式描绘，在恐怖漫画中实属罕见，也让富江这个角色带有了一丝悲剧色彩。</p>
+                <p><strong>循环与无解的结构：</strong>富江漫画的每一个故事都在重复类似的模式：人们发现富江，被其吸引，试图控制或毁灭她，最终以悲剧收场。这种循环结构本身就是一种恐怖——无论人类如何努力，都无法逃脱这个命运般的循环。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关推荐 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">相关主题延伸阅读</h2>
+            <p class="section-desc">富江漫画作为伊藤润二恐怖宇宙的重要一环，与其其他作品及一些衍生内容有着紧密联系。以下内容可以帮助你扩展阅读视野。</p>
+            <div class="related-links">
+                <a href="#" class="related-item">
+                    <strong>伊藤润二恐怖漫画全集</strong>
+                    <small>了解作者其他代表作品</small>
+                </a>
+                <a href="#" class="related-item">
+                    <strong>《漩涡》</strong>
+                    <small>伊藤润二另一巅峰之作</small>
+                </a>
+                <a href="#" class="related-item">
+                    <strong>《人头气球》</strong>
+                    <small>短篇恐怖故事集</small>
+                </a>
+                <a href="#" class="related-item">
+                    <strong>富江电影改编</strong>
+                    <small>真人影视化作品概览</small>
+                </a>
+                <a href="#" class="related-item">
+                    <strong>恐怖漫画发展史</strong>
+                    <small>了解日式恐怖漫画脉络</small>
+                </a>
+                <a href="#" class="related-item">
+                    <strong>伊藤润二画风解析</strong>
+                    <small>独特画面美学探秘</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <h2 class="section-title">关于富江漫画的常见问题</h2>
+            <p class="section-desc">以下是读者在接触富江漫画时经常遇到的问题，我们整理了回答供你参考。</p>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question">富江漫画一共有多少篇故事？</div>
+                    <div class="faq-answer">
+                        <p>富江漫画系列目前包含超过20个独立故事，从1987年开始连载至今仍在持续创作中。不同版本的单行本收录情况略有差异，日本原版通常将富江系列单独成册出版。由于故事仍在持续增加，具体的篇数会随新作品的发表而变化。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">富江漫画和伊藤润二的其他作品有关联吗？</div>
+                    <div class="faq-answer">
+                        <p>在伊藤润二的漫画宇宙中，富江系列偶尔会与其他作品产生微妙的联系。例如某些背景元素或次要角色可能会在其他故事中出现，但这种关联非常隐晦，通常不影响独立阅读。富江漫画本身是一个相对独立的系列，但了解伊藤润二的其他作品有助于更全面地理解他的创作风格。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">富江为什么杀不死？她到底是什么？</div>
+                    <div class="faq-answer">
+                        <p>富江的设定在系列中从未被明确解释，这正是其恐怖感的来源之一。从故事中可以推测，富江可能是一种超自然的存在，她的细胞具有极强的再生能力，即使被碎尸也能从碎片中重生出新的完整个体。有读者解读她为一种“概念性怪物”，代表着人类欲望中无法被消灭的部分。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">富江漫画适合什么样的读者？</div>
+                    <div class="faq-answer">
+                        <p>富江漫画适合喜欢心理恐怖、超自然题材和独特艺术风格的成年读者。如果你喜欢《漩涡》或《寒蝉鸣泣之时》这类带有心理惊悚元素的作品，富江漫画很可能会吸引你。但如果你对血腥画面或压抑氛围较为敏感，建议谨慎选择。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">先看富江漫画还是先看改编电影？</div>
+                    <div class="faq-answer">
+                        <p>强烈建议先阅读漫画原著。富江漫画的恐怖氛围很大程度上依赖于伊藤润二独特的画风和分镜技巧，这是电影改编难以完全还原的。虽然富江有多部真人电影改编作品，但口碑普遍不如原作漫画。先看漫画能让你获得最原汁原味的体验。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">富江漫画的阅读顺序有讲究吗？</div>
+                    <div class="faq-answer">
+                        <p>没有严格的阅读顺序要求。每个故事都是相对完整的单元，但从第一篇《富江》开始阅读会给你更好的入门体验。如果你想按主题阅读，可以尝试将涉及“组织猎杀”的故事归类阅读，或将探讨“分裂”主题的故事放在一起看，这样能感受到系列内在的脉络。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>富江漫画 · 恐怖美学指南</h3>
+                <p>一个专注于伊藤润二富江漫画系列深度介绍与解读的专题页面。我们致力于为恐怖漫画爱好者提供有价值的信息与阅读参考。</p>
+            </div>
+            <div class="footer-links">
+                <h3 style="color:#c0a080; margin-bottom: 14px; font-size: 1.1rem;">快速导航</h3>
+                <ul>
+                    <li><a href="#overview">系列概览</a></li>
+                    <li><a href="#works">主要篇章</a></li>
+                    <li><a href="#guide">入坑指南</a></li>
+                    <li><a href="#analysis">深度解读</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3 style="color:#c0a080; margin-bottom: 14px; font-size: 1.1rem;">相关资源</h3>
+                <ul>
+                    <li><a href="#">伊藤润二作品年表</a></li>
+                    <li><a href="#">恐怖漫画推荐</a></li>
+                    <li><a href="#">正版漫画购买渠道</a></li>
+                    <li><a href="#">漫画术语词典</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>本站内容仅供学习交流与参考 · 富江漫画版权归原作者伊藤润二及相关出版社所有</p>
+            <p style="margin-top: 6px;">© 2024 富江漫画专题指南 · 尊重知识产权 · 支持正版漫画</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ 折叠交互
+    document.addEventListener('DOMContentLoaded', function() {
+        var faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(function(item) {
+            var question = item.querySelector('.faq-question');
+            if (question) {
+                question.addEventListener('click', function() {
+                    // 关闭其他项
+                    faqItems.forEach(function(otherItem) {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    item.classList.toggle('active');
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
